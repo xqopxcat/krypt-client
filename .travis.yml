@@ -6,4 +6,4 @@ before_install:
   - docker build -t xqopxcat/krypt-client -f Dockerfile.dev .
   
 script:
-  - docker run -e CI=true xqopxcat/krypt-client
+  - docker run -e CI=true xqopxcat/krypt-client npm run test
