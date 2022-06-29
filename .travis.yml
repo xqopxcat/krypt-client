@@ -7,3 +7,16 @@ before_install:
   
 script:
   - docker run -e CI=true xqopxcat/krypt-client npm run test
+  
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-west-2'
+  app: 'krypt-client'
+  env: 'Kryptclient-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-809357307840'
+  bucket_path: 'krypt-client'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
+  
