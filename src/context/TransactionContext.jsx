@@ -134,6 +134,7 @@ export const TransactionProvider = ({ children }) => {
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             
             setCurrentAccount(accounts[0]);
+            getAllTransactions();
         } catch (error) {
             console.log(error);
             
