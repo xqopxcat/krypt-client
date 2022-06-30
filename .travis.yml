@@ -6,7 +6,7 @@ before_install:
   - docker build -t xqopxcat/krypt-client .
   
 script:
-  - docker run -e CI=true xqopxcat/krypt-client
+  - docker run -e CI=true xqopxcat/krypt-client npm run test
   
 deploy:
   provider: elasticbeanstalk
