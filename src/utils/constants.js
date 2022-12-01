@@ -1,4 +1,4 @@
 import abi from './Transactions.json';
 
 export const contractABI = abi.abi;
-export const contractAddress = '0xA0A66e8fC36831c566255fAD4AaeAd4fE025B3Cb';
+export const contractAddress = '0x3843D1883dC238Ff0aed50af2B9835E3f974035e';
